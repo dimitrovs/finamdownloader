@@ -44,7 +44,7 @@ def __get_url__(symbol, period, start_date, end_date, verbose=False):
     #finam_URL = "/table.csv?d=d&market=1&f=table&e=.csv&dtf=1&tmf=1&MSOR=0&sep=1&sep2=1&at=1&"
     finam_URL = "/table.csv?d=d&market=1&f=table&e=.csv&dtf=1&tmf=3&MSOR=0&mstime=on&mstimever=1&sep=3&sep2=1&at=1&"
     #'/table.csv?d=d&market=1&f=table&e=.csv&dtf=1&tmf=3&MSOR=0&mstime=on&mstimever=1&sep=3&sep2=1&at=1'
-    symb = __get_finam_code__(symbol, verbose)
+    symb = symbol
     params = urlencode({"p": period, "em": symb,
                         "df": start_date.day, "mf": start_date.month - 1,
                         "yf": start_date.year,
